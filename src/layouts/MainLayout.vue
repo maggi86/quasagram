@@ -6,15 +6,15 @@
       <q-toolbar class="constraint" >
         <q-btn flat icon="eva-camera-outline"
         size="18px" dense 
-        to="/camera" class="large-screen-only q-mr-sm" />
+        to="/camera" class="lg-screen-only q-mr-sm" />
         <q-separator spaced inset
-        class="large-screen-only" />
-        <q-toolbar-title class="text-grand-hotel text-bold">
+        class="lg-screen-only" />
+        <q-toolbar-title class="text-grand-hotel text-bold text-center">
           Quasagram
         </q-toolbar-title>
         <q-btn flat icon="eva-home-outline"
         size="18px" dense 
-        to="/" class="large-screen-only" />
+        to="/" class="lg-screen-only" />
       </q-toolbar>
     </q-header>
 

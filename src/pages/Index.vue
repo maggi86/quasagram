@@ -1,7 +1,12 @@
 <template>
   <q-page class="constraint q-pa-md" >
-    <q-card class="card-post" flat bordered>
-      <q-item>
+    <div class="row q-col-gutter-lg">
+      <div class="col-12 col-sm-8">
+    <q-card class="card-post q-mb-md" flat bordered
+    v-for="post in posts"
+    :key="post.id"
+    >
+    <q-item>
         <q-item-section avatar>
           <q-avatar>
             <img src="#">
@@ -11,7 +16,7 @@
         <q-item-section>
           <q-item-label class="text-bold" >meagan_williams</q-item-label>
           <q-item-label caption>
-            At your boyfriend's house
+            {{post.location}}
           </q-item-label>
         </q-item-section>
       </q-item>
@@ -22,14 +27,34 @@
         src="https://cdn.quasar.dev/img/parallax2.jpg"
       />
       <q-card-section>
-        <div>Gold Gate Bridge</div>
-        <div class="text-caption text-grey">June 10 9:23PM</div>
+        <div>{{post.caption}}</div>
+        <div class="text-caption text-grey">{{ post.date | niceDate }}</div>
       </q-card-section>
     </q-card>
+  </div>
+  <div class="col-4 lg-screen-only">
+    <q-item class="fixed">
+        <q-item-section avatar>
+          <q-avatar size="48px" >
+            <img src="#">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label class="text-bold" >meagan_williams</q-item-label>
+          <q-item-label caption>
+            Meagan Williams
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+  </div>
+  </div>
   </q-page>
 </template>
 
 <script>
+import { date } from 'quasar'
+
 export default {
   name: 'PageIndex',
   data(){
@@ -64,6 +89,16 @@ export default {
           imageUrl:'https://cdn.quasar.dev/img/parallax2.jpg'
         }
       ]
+    }
+  },
+  methods: {
+    getPosts() {
+
+    }
+  },
+  filters:{
+    niceDate(value){
+      return date.formatDate(value,' HH:ssA Do-MMM-YYYY')
     }
   }
 }
