@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "quasar serve",
+    "build": "quasar build"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -18,7 +18,7 @@
     "quasar": "^1.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.0"
+    "@quasar/app": "^3.3.3"
   },
   "browserslist": [
     "ie >= 11",
