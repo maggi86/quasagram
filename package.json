@@ -6,7 +6,9 @@
   "author": "maggi86 <meaganwilliams407@gmail.com>",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
